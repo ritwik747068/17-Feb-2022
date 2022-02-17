@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+// typedef long long ll;
+
+int main() { 
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        int t = n;
+        int sec=0;
+        int curr=0;
+        while(t){
+            if(n&(1<<curr)){
+                // do nothing
+            }
+            else sec+=(1<<curr);
+            curr++;
+            t>>=1;
+        }
+        cout<<sec*n<<"\n";
+    }
+    return 0;
+}
